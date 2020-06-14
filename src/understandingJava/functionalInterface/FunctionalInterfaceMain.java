@@ -12,8 +12,56 @@ interface MyFunctionalInterface{
 }
 
 
+// method 4 **
+class TempClassToBypassStatic{
+	int myCalculateSum(int x , int y)
+	{
+		return x+y;
+	}
+	
+	static int myStaticCalculateSum(int x , int y)
+	{
+		return x+y;
+	}
+	
+	void checkAssignmentOfStaticAndNonstaticMethodsToFunctionalInterface() {
+////		 not possible as particular function not static hence can't be referenced by class
+//		MyFunctionalInterface objectOfAnonymousClass = TempClassToBypassStatic::myCalculateSum;    
+
+		
+		
+//	assigning non static method to functional interface using object reference
+		MyFunctionalInterface objectOfAnonymousClassNonStaticMethodReferance = new TempClassToBypassStatic()::myCalculateSum;
+
+//	assigning static method reference to functional interface using class reference
+		MyFunctionalInterface objectOfAnonymousClassStaticMethodReferance = TempClassToBypassStatic::myStaticCalculateSum;
+		
+		
+		System.out.println("Implementation using non static method referance: "+objectOfAnonymousClassNonStaticMethodReferance.calculateSum(13, 18));
+		
+		System.out.println("Implementation using static method referance: "+objectOfAnonymousClassStaticMethodReferance.calculateSum(14, 19));
+		
+		
+	}
+	
+	
+	
+	
+}
+
+
+
+
+
 
 public class FunctionalInterfaceMain {
+	
+	
+	static int myCalculateSum(int x , int y)
+	{
+		return x+y;
+	}
+	
 	
 	public static void main(String[] args) {
 		
@@ -22,6 +70,7 @@ public class FunctionalInterfaceMain {
 		 * 1)The present class implementing the interface like normal interface and overriding the unimplemented method 
 		 * 2)Using Anonymous Class
 		 * 3)Using lambda expression to provide functionality to the unimplemented method
+		 * 4)Assign a method reference to the interface 
 		 */
 		
 //		2) Anonymous class. this created object of an anonymous class.
@@ -50,9 +99,16 @@ public class FunctionalInterfaceMain {
 		System.out.println("implementation using lambda expression 2 : "+ objectOfAnonymousClassLambdaExpression2.calculateSum(12, 17));
 		
 		
+//		4) check in the above class for details**
+		new TempClassToBypassStatic().checkAssignmentOfStaticAndNonstaticMethodsToFunctionalInterface();
+		
 		
 		
 		
 	} 
 	
 }
+
+
+
+

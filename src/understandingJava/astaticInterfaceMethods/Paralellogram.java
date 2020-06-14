@@ -1,4 +1,4 @@
-package understandingJava.anonymousClasses;
+package understandingJava.astaticInterfaceMethods;
 
 public interface Paralellogram {
 
@@ -9,12 +9,15 @@ public interface Paralellogram {
 	
 	
 	public int area();
-	public Paralellogram setLength(int length);
-	public Paralellogram setWidth(int width);
-	public void testAccessToVariablesOfEnclosingScopes();
+	
 	default void showAreaDefault() {
-		System.out.println("called from default method: "+area());
+		System.out.println("We are in interface's Default method ");
 	}
+	
+	default void showAreaDefaultNotOverriden() {
+		System.out.println("We are in interface's Default method which is not overriden ");
+	}
+	
 	static void showAreaStatic() {
 		System.out.println("We are in Interface's Static method");
 	}

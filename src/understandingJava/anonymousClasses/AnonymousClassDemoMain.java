@@ -72,15 +72,21 @@ class AnonymousClassDemo {
 
 
 			}
+			
+			
+			
+			
+			
+			
+			
 
 /*			incase multiple interfaces are implemented by a class then either clashing default methods needs to be 
-*			overriden or if any particular interface's default menthod needs to called it has to
+*			overridden or if any particular interface's default menthod needs to called it has to
 *			be done in the following manner
 */			
-			
-			public void showArea() {
+			public void showAreaDefault() {
 				
-				Paralellogram.super.showArea();
+				Paralellogram.super.showAreaDefault();
 				
 			}
 			
