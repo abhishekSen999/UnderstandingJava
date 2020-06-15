@@ -9,6 +9,9 @@ package understandingJava.functionalInterface;
 @FunctionalInterface
 interface MyFunctionalInterface{
 	int calculateSum(int x , int y);
+	default void show() {
+		System.out.println("hello i am the default method");
+	}
 }
 
 
@@ -41,7 +44,8 @@ class TempClassToBypassStatic{
 		
 		System.out.println("Implementation using static method referance: "+objectOfAnonymousClassStaticMethodReferance.calculateSum(14, 19));
 		
-		
+		// testing default function in a functional interface
+		objectOfAnonymousClassNonStaticMethodReferance.show();
 	}
 	
 	
@@ -86,7 +90,8 @@ public class FunctionalInterfaceMain {
 		
 		System.out.println("impementation using anonymous class: "+ objectOfAnonymousClass.calculateSum(10, 15));
 
-//		3) Lambda Expression - this is a short form for writing and creating anonymous class objects
+//		3) Lambda Expression - this is a short form for writing and creating anonymous class objects by directly 
+//		providing implementation of unimplemented function
 		
 		MyFunctionalInterface objectOfAnonymousClassLambdaExpression1 = (int x , int y)->{
 			return x+y;

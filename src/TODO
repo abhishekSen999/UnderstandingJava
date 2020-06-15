@@ -1,10 +1,15 @@
 TODO
-1) Stream in java 8
-2)implement serialization
-3)Explore lambdas -oracle( https://www.oracle.com/technical-resources/articles/java/architect-lambdas-part1.html )
+*) Stream in java 8 (https://www.baeldung.com/java-8-streams) (journaldev)
+*) LinkedHashmap
+*)implement serialization
+*)Explore lambdas -oracle( https://www.oracle.com/technical-resources/articles/java/architect-lambdas-part1.html )
 				  -
 				  
-4) Optional - (https://www.oracle.com/technical-resources/articles/java/java8-optional.html)	
+*) Optional - (https://www.oracle.com/technical-resources/articles/java/java8-optional.html)	
 			- (https://www.baeldung.com/java-optional)
 			
-5)Spring Rest @RequestParam - (https://www.baeldung.com/spring-request-param)						  
+*)Spring Rest @RequestParam - (https://www.baeldung.com/spring-request-param)			
+*) how to handle exception in lambda and anonymous classes.
+*) Java memory model
+*)Atomic variables - (https://www.baeldung.com/java-atomic-variables	)
+*)			  
