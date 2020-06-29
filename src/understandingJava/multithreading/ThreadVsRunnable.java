@@ -1,14 +1,22 @@
 package understandingJava.multithreading;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 class ImplementsRunnable implements Runnable {
 
 	private int counter = 0;
+	List<Integer> list;
+
+	public ImplementsRunnable(List<Integer> list) {
+		this.list = list;
+	}
 
 	public void run() {
 		counter++;
-		System.out.println("ImplementsRunnable : Counter : " + counter+ " , Id: "+Thread.currentThread().getId());
+		list.add(1);
+		System.out.println("ImplementsRunnable : Counter : " + counter+ " , Id: "+Thread.currentThread().getId()+" shared list: "+list);
 	}
 }
 
@@ -28,7 +36,8 @@ public class ThreadVsRunnable {
 
 	public static void main(String args[]) throws Exception {
 //Multiple threads share the same object.
-		ImplementsRunnable rc = new ImplementsRunnable();
+		List<Integer> list= new ArrayList<Integer>();
+		ImplementsRunnable rc = new ImplementsRunnable(list);
 		Thread t1 = new Thread(rc);
 		t1.start();
 		Thread.sleep(1000); // Waiting for 1 second before starting next thread

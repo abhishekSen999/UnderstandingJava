@@ -18,8 +18,9 @@ public interface Paralellogram {
 		System.out.println("We are in interface's Default method which is not overriden ");
 	}
 	
-	static void showAreaStatic() {
+	static void showAreaStatic()
+	{
 		System.out.println("We are in Interface's Static method");
 	}
-		
+
 }
