@@ -6,7 +6,7 @@ class UnderstandingInnerClass {
 	private int privateInstanceVariable;
 	int defaultInstancevariable; // accessible within package
 	protected int protectedInstanceVariable;// accessible to only subclasses
-	public int publicInstanceVarable;// well you know it
+	public int publicInstanceVariable;// well you know it
 	
 	
 	
@@ -16,7 +16,7 @@ class UnderstandingInnerClass {
 		privateInstanceVariable = 0;
 		defaultInstancevariable = 1;
 		protectedInstanceVariable = 2;
-		publicInstanceVarable = 3;
+		publicInstanceVariable = 3;
 		
 		
 	}
@@ -37,7 +37,7 @@ class UnderstandingInnerClass {
 				 * Here we see that in JAVA 8 onwards all local and instance variables are accessible within the inner class
 				 */
 				
-				System.out.println("Public Instance Variable: " + publicInstanceVarable);
+				System.out.println("Public Instance Variable: " + publicInstanceVariable);
 				System.out.println("Default Instance Variable: " + defaultInstancevariable);
 				System.out.println("Protected Instance Variable: " + protectedInstanceVariable);
 				System.out.println("Private Instance Variable: " + privateInstanceVariable);;

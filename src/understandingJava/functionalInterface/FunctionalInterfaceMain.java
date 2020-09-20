@@ -70,7 +70,7 @@ public class FunctionalInterfaceMain {
 	public static void main(String[] args) {
 		
 		/*
-		 * functional interface can be implemented in 3 ways
+		 * functional interface can be implemented in 4 ways
 		 * 1)The present class implementing the interface like normal interface and overriding the unimplemented method 
 		 * 2)Using Anonymous Class
 		 * 3)Using lambda expression to provide functionality to the unimplemented method
